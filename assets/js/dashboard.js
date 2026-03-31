@@ -101,11 +101,4 @@ function initDashboard() {
 
     initStatusTrackers();
 
-    // Animate metrics on load
-    const metrics = document.querySelectorAll('.dashboard-metric');
-    metrics.forEach((metric, index) => {
-        setTimeout(() => {
-            metric.classList.add('animate-secure-pulse');
-        }, index * 200);
-    });
 }

@@ -72,9 +72,16 @@
                     </label>
                     <div class="relative">
                         <i class="fas fa-key absolute left-4 top-1/2 -translate-y-1/2 text-secondary/40"></i>
-                        <input type="password" class="w-full bg-primary/50 border border-white/10 p-4 pl-12 font-sm text-white rounded input-accent transition-colors" required>
+                        <input id="login-password" type="password" class="w-full bg-primary/50 border border-white/10 p-4 pl-12 pr-12 font-sm text-white rounded input-accent transition-colors" required>
+                        <button id="password-toggle" type="button" aria-label="Show password" class="absolute right-4 top-1/2 -translate-y-1/2 text-secondary/40 hover:text-accent transition-colors">
+                            <i id="password-toggle-icon" class="fas fa-eye"></i>
+                        </button>
                     </div>
                 </div>
+                <label class="flex items-center gap-3 text-xs text-secondary/60 cursor-pointer select-none">
+                    <input type="checkbox" class="h-4 w-4 rounded border-white/20 bg-primary/50 accent-accent">
+                    <span class="font-bold tracking-widest uppercase">Remember Me</span>
+                </label>
             </div>
 
             <div class="mt-8">
@@ -107,5 +114,20 @@
     </div>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        const passwordInput = document.getElementById('login-password');
+        const passwordToggle = document.getElementById('password-toggle');
+        const passwordToggleIcon = document.getElementById('password-toggle-icon');
+
+        if (passwordInput && passwordToggle && passwordToggleIcon) {
+            passwordToggle.addEventListener('click', () => {
+                const showPassword = passwordInput.type === 'password';
+                passwordInput.type = showPassword ? 'text' : 'password';
+                passwordToggle.setAttribute('aria-label', showPassword ? 'Hide password' : 'Show password');
+                passwordToggleIcon.classList.toggle('fa-eye', !showPassword);
+                passwordToggleIcon.classList.toggle('fa-eye-slash', showPassword);
+            });
+        }
+    </script>
 </body>
 </html>
