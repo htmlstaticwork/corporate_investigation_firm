@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initRTL();
     initAnimations();
     initMobileMenu();
+    initBackToTop();
 });
 
 // Theme Management
@@ -116,6 +117,26 @@ function initAnimations() {
 
     document.querySelectorAll('.reveal-on-scroll').forEach(el => {
         observer.observe(el);
+    });
+}
+
+function initBackToTop() {
+    const backToTopButton = document.getElementById('back-to-top');
+    if (!backToTopButton) return;
+
+    const toggleButtonVisibility = () => {
+        const shouldShow = window.scrollY > 400;
+        backToTopButton.classList.toggle('opacity-0', !shouldShow);
+        backToTopButton.classList.toggle('invisible', !shouldShow);
+        backToTopButton.classList.toggle('translate-y-4', !shouldShow);
+        backToTopButton.classList.toggle('pointer-events-none', !shouldShow);
+    };
+
+    toggleButtonVisibility();
+    window.addEventListener('scroll', toggleButtonVisibility, { passive: true });
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
 

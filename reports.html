@@ -335,7 +335,7 @@
 
             <div class="flex flex-col lg:flex-row items-end justify-between mb-16 gap-6 reveal-on-scroll">
 
-                <div>
+                <div class="w-full text-center lg:w-auto lg:text-left">
 
                     <h2 class="text-accent text-xs font-bold tracking-[0.4em] uppercase mb-4">Declassified Archive</h2>
 
@@ -723,7 +723,7 @@
 
     <!-- Footer (Shared) -->
 
-    <footer class="py-10 border-t border-white/5 bg-primary/80">
+    <footer class="py-10 border-t border-secondary/15 bg-primary/80">
 
         <div class="container mx-auto px-4 md:px-8 grid md:grid-cols-4 gap-12">
 
@@ -747,11 +747,21 @@
 
                 </div>
 
-                <p class="text-secondary/40 text-sm leading-relaxed max-w-sm">
+                <p class="footer-description text-sm leading-relaxed max-w-sm">
 
                     Registered intelligence agency specializing in enterprise-scale investigations, risk mitigation, and executive due diligence since 2008.
 
                 </p>
+
+                <div class="flex gap-6 mt-6">
+
+                    <a href="#" class="text-secondary/20 hover:text-accent transition-colors"><i class="fab fa-linkedin-in"></i></a>
+
+                    <a href="#" class="text-secondary/20 hover:text-accent transition-colors"><i class="fab fa-twitter"></i></a>
+
+                    <a href="#" class="text-secondary/20 hover:text-accent transition-colors"><i class="fas fa-lock"></i></a>
+
+                </div>
 
             </div>
 
@@ -791,21 +801,11 @@
 
         </div>
 
-        <div class="container mx-auto px-4 md:px-8 mt-8 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="container mx-auto px-4 md:px-8 mt-8 pt-6 border-t border-white/5 flex justify-center items-center">
 
-            <div class="text-xs tracking-[0.2em] font-medium text-secondary/20 uppercase">
+            <div class="footer-copyright text-xs tracking-[0.2em] font-medium uppercase text-center">
 
                 &copy; 2026 CORPORATE INVESTIGATION FIRM. ALL RIGHTS RESERVED.
-
-            </div>
-
-            <div class="flex gap-6">
-
-                <a href="#" class="text-secondary/20 hover:text-accent transition-colors"><i class="fab fa-linkedin-in"></i></a>
-
-                <a href="#" class="text-secondary/20 hover:text-accent transition-colors"><i class="fab fa-twitter"></i></a>
-
-                <a href="#" class="text-secondary/20 hover:text-accent transition-colors"><i class="fas fa-lock"></i></a>
 
             </div>
 
@@ -813,7 +813,14 @@
 
     </footer>
 
-
+<button
+        id="back-to-top"
+        type="button"
+        aria-label="Back to top"
+        class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-accent text-primary shadow-[0_10px_30px_rgba(198,168,91,0.35)] flex items-center justify-center opacity-0 invisible translate-y-4 pointer-events-none transition-all duration-300 hover:scale-105 hover:shadow-[0_12px_36px_rgba(198,168,91,0.45)]"
+    >
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="assets/js/main.js"></script>
 

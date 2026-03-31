@@ -53,11 +53,28 @@ html, body {
 }
 
 /* Animation Classes */
-.animate-intelligence { animation: intelligenceFade 0.8s forwards; opacity: 0; }
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.animate-intelligence { opacity: 1; transform: none; }
 .animate-data-stream { animation: dataStream 20s infinite linear; }
 .animate-secure-pulse { animation: securePulse 2s infinite; }
 .animate-grid-reveal { animation: gridReveal 0.6s ease-out; }
 .animate-scan { animation: scanVertical 4s infinite linear; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll,
+  .animate-intelligence {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    will-change: auto;
+  }
+}
 
 @keyframes radarSweep {
   from { transform: rotate(0deg); }
@@ -110,6 +127,18 @@ html, body {
 .btn-primary:hover {
   transform: scale(1.02);
   filter: brightness(1.1);
+}
+
+.hero-secondary-btn {
+  backdrop-filter: blur(10px);
+  transition: var(--transition-smooth);
+}
+
+.hero-secondary-btn:hover {
+  transform: translateY(-2px);
+  border-color: rgba(198, 168, 91, 0.9);
+  background-color: rgba(15, 23, 42, 0.78);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.32), inset 0 0 0 1px rgba(198, 168, 91, 0.16);
 }
 
 .input-accent:focus {

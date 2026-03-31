@@ -40,3 +40,23 @@ body {
   background: var(--card-bg);
   border-color: var(--card-border);
 }
+
+.footer-copyright {
+  color: rgb(var(--secondary-rgb) / 0.2);
+}
+
+[data-theme="light"] .footer-copyright {
+  color: rgb(var(--secondary-rgb) / 0.5);
+}
+
+.footer-description {
+  color: rgb(var(--secondary-rgb) / 0.4);
+}
+
+[data-theme="light"] .footer-description {
+  color: rgb(var(--secondary-rgb) / 0.72);
+}
+
+[data-theme="light"] .hero-secondary-btn {
+  border-color: rgb(var(--accent-rgb) / 0.7);
+}
