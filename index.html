@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Corporate Investigation Firm | Clarity Before Commitment</title>
+
+    <meta name="description" content="Professional, discreet, and high-trust corporate investigation services. Due diligence, background checks, and risk profiling for elite corporate clients.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/theme.css">
+
+    <link rel="stylesheet" href="assets/css/rtl.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        primary: 'rgb(var(--primary-rgb) / <alpha-value>)',
+
+                        secondary: 'rgb(var(--secondary-rgb) / <alpha-value>)',
+
+                        accent: 'rgb(var(--accent-rgb) / <alpha-value>)',
+
+                        white: 'rgb(var(--text-main-rgb) / <alpha-value>)',
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+
+
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+</head>
+
+<body class="bg-primary text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+
+    <nav class="fixed top-0 w-full z-50 glass-card bg-primary/95 border-b border-white/10 h-16 md:h-20 flex items-center">
+
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center h-full">
+
+            <div class="flex items-center gap-2">
+
+                <div class="w-10 h-10 bg-accent rounded flex items-center justify-center text-primary font-bold text-lg md:text-xl transform rotate-45">
+
+                    <span class="-rotate-45">C</span>
+
+                </div>
+
+                <div class="flex flex-col">
+
+                    <span class="text-lg font-bold tracking-widest text-secondary -mb-1">CORPORATE</span>
+
+                    <span class="text-xs tracking-[0.3em] text-accent font-medium">INVESTIGATION</span>
+
+                </div>
+
+            </div>
+
+
+
+            
+            <!-- Center Navigation Links -->
+            
+            <!-- Center Navigation Links -->
+            <div class="hidden xl:flex items-center gap-6 xl:gap-10 h-full absolute left-1/2 -translate-x-1/2">
+                <!-- Home Dropdown -->
+                <div class="relative group/home">
+                    <button class="nav-link text-xs xl:text-sm font-semibold tracking-widest text-secondary hover:text-accent flex items-center gap-1.5">
+                        HOME <i class="fas fa-chevron-down text-[9px] transition-transform duration-200 group-hover/home:rotate-180"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-36 bg-primary/95 backdrop-blur-xl border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.6)] opacity-0 invisible group-hover/home:opacity-100 group-hover/home:visible transition-all duration-200 z-50">
+                        <a href="index.html" class="flex items-center gap-2 px-4 py-3 text-xs font-semibold tracking-widest text-secondary hover:text-accent hover:bg-white/5 transition-colors border-b border-white/10">
+                            <i class="fas fa-circle text-[5px] text-accent"></i> HOME 1
+                        </a>
+                        <a href="home-2.html" class="flex items-center gap-2 px-4 py-3 text-xs font-semibold tracking-widest text-secondary hover:text-accent hover:bg-white/5 transition-colors">
+                            <i class="fas fa-circle text-[5px] text-accent"></i> HOME 2
+                        </a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link text-xs xl:text-sm font-semibold tracking-widest text-secondary hover:text-accent ">ABOUT</a>
+                <a href="services.html" class="nav-link text-xs xl:text-sm font-semibold tracking-widest text-secondary hover:text-accent ">SERVICES</a>
+                <a href="investigations.html" class="nav-link text-xs xl:text-sm font-semibold tracking-widest text-secondary hover:text-accent ">INVESTIGATIONS</a>
+                <a href="reports.html" class="nav-link text-xs xl:text-sm font-semibold tracking-widest text-secondary hover:text-accent ">REPORTS</a>
+                <a href="contact.html" class="nav-link text-xs xl:text-sm font-semibold tracking-widest text-secondary hover:text-accent ">CONTACT</a>
+            </div>
+            <!-- Right Side Tools & Login -->
+            <div class="flex items-center gap-4 xl:gap-8 ml-auto">
+                <div class="hidden xl:flex items-center gap-4 xl:gap-6 border-l border-white/20 pl-4 xl:pl-6">
+                    <a href="dashboard.html" title="Dashboard" class="text-secondary hover:text-accent transition-colors"><i class="fas fa-chart-line text-lg"></i></a>
+                    <button id="rtl-toggle" title="RTL" class="text-secondary hover:text-accent transition-colors"><i class="fas fa-language text-xl"></i></button>
+                    <button id="theme-toggle" title="Theme" class="text-secondary hover:text-accent transition-colors"><i class="fas fa-moon text-lg"></i></button>
+                    <a href="login.html" class="btn-primary text-xs tracking-widest px-6 py-2">LOGIN</a>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="hamburger" class="xl:hidden text-secondary text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            </div>
+
+        </div>
+
+
+
+            </nav>
+
+
+
+    <!-- Mobile Drawer Overlay -->
+
+    <div id="mobile-drawer-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300"></div>
+
+
+
+    <!-- Right Side Sliding Drawer -->
+
+    <div id="mobile-drawer" class="fixed top-0 right-0 h-[100dvh] w-3/4 max-w-[350px] bg-primary/95 backdrop-blur-xl border-l border-white/10 z-[70] transform translate-x-full transition-transform duration-300 flex flex-col shadow-[rgba(0,0,0,0.8)_0px_0px_50px]">
+
+        <!-- Drawer Header -->
+
+        <div class="flex items-center justify-between p-6 border-b border-white/10">
+
+            <div class="flex items-center gap-2">
+
+                <div class="w-10 h-10 bg-accent rounded flex items-center justify-center text-primary font-bold text-lg transform rotate-45 animate-secure-pulse">
+
+                    <span class="-rotate-45">C</span>
+
+                </div>
+
+                <div class="flex flex-col">
+
+                    <span class="text-lg font-bold tracking-widest text-secondary -mb-1">CORPORATE</span>
+
+                    <span class="text-xs tracking-[0.3em] text-accent font-medium">INVESTIGATION</span>
+
+                </div>
+
+            </div>
+
+            <button id="close-drawer" class="text-secondary hover:text-accent text-2xl transition-colors cursor-pointer">
+
+                <i class="fas fa-times pointer-events-none"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- Drawer Content -->
+
+        <div class="flex-1 overflow-y-auto py-8 px-6 flex flex-col gap-6">
+
+            <!-- Drawer Home Dropdown -->
+            <div class="drawer-dropdown">
+                <button class="drawer-dd-trigger w-full flex items-center justify-between text-sm font-semibold tracking-widest text-secondary hover:text-white transition-colors">
+                    HOME <i class="fas fa-chevron-down text-xs text-accent transition-transform duration-300 drawer-dd-icon"></i>
+                </button>
+                <div class="drawer-dd-panel mt-3 ml-3 border-l border-accent/30 pl-4 space-y-3 overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out">
+                    <a href="index.html" class="block text-xs font-semibold tracking-widest text-secondary/70 hover:text-accent transition-colors">HOME 1</a>
+                    <a href="home-2.html" class="block text-xs font-semibold tracking-widest text-secondary/70 hover:text-accent transition-colors">HOME 2</a>
+                </div>
+            </div>
+
+            <a href="about.html" class="text-sm font-semibold tracking-widest text-secondary hover:text-white transition-colors">ABOUT</a>
+
+            <a href="services.html" class="text-sm font-semibold tracking-widest text-secondary hover:text-white transition-colors">SERVICES</a>
+
+            <a href="investigations.html" class="text-sm font-semibold tracking-widest text-secondary hover:text-white transition-colors">INVESTIGATIONS</a>
+
+            <a href="reports.html" class="text-sm font-semibold tracking-widest text-secondary hover:text-white transition-colors">REPORTS</a>
+
+            <a href="contact.html" class="text-sm font-semibold tracking-widest text-secondary hover:text-white transition-colors">CONTACT</a>
+
+            
+
+            <div class="border-t border-white/10 my-2"></div>
+
+            
+
+            <!-- Icon-only row: Dashboard + RTL + Theme -->
+
+            <div class="flex items-center gap-3">
+
+                <a href="dashboard.html" title="Dashboard" class="w-10 h-10 flex items-center justify-center rounded border border-white/10 text-secondary hover:text-accent hover:border-accent/50 transition-all duration-200">
+
+                    <i class="fas fa-chart-line text-base"></i>
+
+                </a>
+
+                <button id="drawer-rtl-toggle" title="Switch RTL/LTR" class="w-10 h-10 flex items-center justify-center rounded border border-white/10 text-secondary hover:text-accent hover:border-accent/50 transition-all duration-200">
+
+                    <i class="fas fa-language text-lg"></i>
+
+                </button>
+
+                <button id="drawer-theme-toggle" title="Toggle Theme" class="w-10 h-10 flex items-center justify-center rounded border border-white/10 text-secondary hover:text-accent hover:border-accent/50 transition-all duration-200">
+
+                    <i class="fas fa-moon text-base theme-icon-drawer"></i>
+
+                </button>
+
+                <a href="login.html" class="btn-primary flex-1 min-w-[80px] py-2 text-xs tracking-widest uppercase flex justify-center items-center text-center font-bold h-10">LOGIN</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Hero Section -->
+
+    <header class="relative min-h-screen pt-20 flex flex-col items-center justify-center bg-primary overflow-hidden border-b border-accent/20">
+
+        
+
+        <style>
+
+            @keyframes hudRotate { 100% { transform: rotate(360deg); } }
+
+            @keyframes hudRotateReverse { 100% { transform: rotate(-360deg); } }
+
+            @keyframes cyberGridLoop { 0% { background-position: 0 0; } 100% { background-position: 0 40px; } }
+
+            .animate-hud-rotate { animation: hudRotate 30s linear infinite; }
+
+            .animate-hud-rotate-reverse { animation: hudRotateReverse 40s linear infinite; }
+
+            .animate-cyber-grid { animation: cyberGridLoop 2s linear infinite; }
+
+            .grid-pattern-ultra {
+
+                background-image: linear-gradient(rgba(198, 168, 91, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(198, 168, 91, 0.15) 1px, transparent 1px);
+
+                background-size: 40px 40px;
+
+            }
+
+        </style>
+
+
+
+        <!-- Immersive 3D Grid Background -->
+
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+
+            <div class="absolute inset-0 grid-pattern-ultra animate-cyber-grid opacity-40 [transform:perspective(800px)_rotateX(60deg)_translateY(-100px)_scale(3)] origin-top"></div>
+
+            <!-- Laser scanline -->
+
+            <div class="absolute top-0 w-full h-[2px] bg-accent shadow-[0_0_20px_rgba(198,168,91,1)] animate-scan"></div>
+
+            <!-- Dark radial fade to cover edges -->
+
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgb(var(--primary-rgb))_70%)]"></div>
+
+        </div>
+
+        
+
+        <div class="container mx-auto px-4 md:px-8 grid lg:grid-cols-2 gap-12 items-center z-10">
+
+            <!-- Left Content -->
+
+            <div class="reveal-on-scroll">
+
+                <div class="inline-flex items-center gap-2 mb-6 border border-accent/30 bg-accent/10 px-5 py-2 rounded-full backdrop-blur">
+
+                    <span class="w-1.5 h-1.5 bg-accent rounded-full animate-ping"></span>
+
+                    <span class="text-xs font-mono font-bold tracking-[0.2em] text-accent uppercase">Enterprise Intelligence Unit</span>
+
+                </div>
+
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-secondary/80">
+
+                    Know Who <br><span class="text-accent animate-pulse">You're Dealing</span> With.
+
+                </h1>
+
+                <p class="text-sm md:text-lg text-secondary/70 leading-relaxed mb-10 max-w-xl font-light">
+
+                    In high-stakes corporate environments, information is the only true currency. We provide elite, discreet investigation services that reveal the truth beneath the surface before you commit.
+
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+
+                    <a href="services.html" class="btn-primary group">
+
+                        REQUEST A CONFIDENTIAL CHECK
+
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+
+                    </a>
+
+                    <a href="investigations.html" class="px-8 py-4 border border-white/20 text-white font-bold tracking-widest text-sm hover:bg-white/5 transition-all text-center backdrop-blur">
+
+                        EXPLORE METHODOLOGIES
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Right Visual: Ultra Unique HUD Animation -->
+
+            <div class="relative flex-none w-[280px] h-[280px] md:w-[380px] md:h-[380px] mx-auto flex items-center justify-center group mt-16 mb-24 md:mb-12 lg:-mt-10 lg:mb-0 reveal-on-scroll" style="transition-delay: 0.2s;">
+
+                
+
+                <!-- Center Core Hologram Image -->
+
+                <div class="absolute z-30 w-48 h-48 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-primary shadow-[0_0_80px_rgba(198,168,91,0.2)] transition-all duration-1000 group-hover:shadow-[0_0_120px_rgba(198,168,91,0.6)] group-hover:scale-105">
+
+                    <img src="assets/images/hero_home_1.jpg" alt="Corporate Investigation Target" class="w-full h-full object-cover group-hover-0 scale-110 group-hover:scale-100 transition-all duration-[1500ms] ease-out">
+
+                    <div class="absolute inset-0 bg-gradient-to-tr from-accent/20 to-transparent mix-blend-overlay pointer-events-none"></div>
+
+                </div>
+
+
+
+                <!-- Geometric Circular Rings (HUD) -->
+
+                <!-- Inner Dashboard Ring -->
+
+                <div class="absolute z-20 w-[180px] h-[180px] md:w-[260px] md:h-[260px] border-2 border-dashed border-accent/40 rounded-full animate-hud-rotate pointer-events-none"></div>
+
+                
+
+                <!-- Middle Orbital Target Ring -->
+
+                <div class="absolute z-10 w-[240px] h-[240px] md:w-[340px] md:h-[340px] border border-secondary/20 rounded-full animate-hud-rotate-reverse pointer-events-none">
+
+                    <!-- Target points -->
+
+                    <div class="absolute top-0 left-1/2 w-3 h-3 bg-accent rounded-full -translate-x-1/2 -translate-y-1/2 shadow-[0_0_10px_rgba(198,168,91,1)]"></div>
+
+                    <div class="absolute bottom-0 left-1/2 w-3 h-3 bg-accent rounded-full -translate-x-1/2 translate-y-1/2 shadow-[0_0_10px_rgba(198,168,91,1)]"></div>
+
+                </div>
+
+
+
+                <!-- Outer Containment Perimeter -->
+
+                <div class="absolute z-0 w-[290px] h-[290px] md:w-[410px] md:h-[410px] border-[1px] border-dotted border-white/20 rounded-full animate-hud-rotate scale-95 group-hover:scale-100 transition-transform duration-1000 pointer-events-none"></div>
+
+
+
+                <!-- Floating Data Module -->
+
+                <div class="absolute z-40 top-8 right-2 md:-right-6 bg-primary/95 backdrop-blur-xl border border-white/10 border-r-2 border-r-accent p-3 md:p-4 flex flex-col items-end gap-1 w-36 md:w-48 shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-transform duration-700 md:group-hover:translate-x-4 max-w-[calc(100vw-32px)]">
+
+                    <span class="text-[8px] md:text-xs text-accent font-bold tracking-[0.2em] uppercase">Target Lock</span>
+
+                    <span class="font-mono text-base md:text-xl text-white tracking-widest text-right">IDENTIFIED</span>
+
+                    <span class="text-[7px] md:text-[9px] text-secondary/50 font-mono text-right mt-1 pt-1 border-t border-white/10 w-full whitespace-nowrap">Background Matrix Active</span>
+
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Trust Strip -->
+
+    <section class="py-12 border-y border-white/5 bg-primary overflow-hidden">
+
+        <div class="flex whitespace-nowrap animate-data-stream opacity-40">
+
+            <span class="text-xs md:text-sm font-bold tracking-[0.5em] mx-8 uppercase">Global Strategic Trust</span>
+
+            <span class="text-xs md:text-sm font-bold tracking-[0.5em] mx-8 uppercase">Capital Partners LLC</span>
+
+            <span class="text-xs md:text-sm font-bold tracking-[0.5em] mx-8 uppercase">Standard Intelligence Group</span>
+
+            <span class="text-xs md:text-sm font-bold tracking-[0.5em] mx-8 uppercase">Vertex Holdings</span>
+
+            <span class="text-xs md:text-sm font-bold tracking-[0.5em] mx-8 uppercase">Alpha Maritime Corp</span>
+
+            <span class="text-xs md:text-sm font-bold tracking-[0.5em] mx-8 uppercase">Apex Ventures</span>
+
+            <span class="text-xs md:text-sm font-bold tracking-[0.5em] mx-8 uppercase">Meridian Global</span>
+
+            <span class="text-xs md:text-sm font-bold tracking-[0.5em] mx-8 uppercase">Zenith Industries</span>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Services Section -->
+
+    <section class="py-20 md:py-32 bg-secondary/5">
+
+        <div class="container mx-auto px-4 md:px-8">
+
+            <div class="text-center mb-16 reveal-on-scroll">
+
+                <h2 class="text-accent text-xs font-bold tracking-[0.4em] uppercase mb-4">Core Intelligence</h2>
+
+                <h3 class="text-3xl md:text-5xl font-bold">Confidential Services</h3>
+
+            </div>
+
+
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Service Card 1 -->
+
+                <div class="glass-card p-0 overflow-hidden group hover-lift reveal-on-scroll bg-primary/80">
+
+                    <div class="h-48 md:h-56 relative overflow-hidden">
+
+                        <img src="assets/images/due_diligence_card.png" alt="Due Diligence Investigation" class="w-full h-full object-cover opacity-100 transition-all duration-700 group-hover:scale-105">
+
+                    </div>
+
+                    <div class="p-8">
+
+                        <h4 class="text-2xl font-bold mb-4">Due Diligence</h4>
+
+                        <p class="text-secondary/60 text-sm leading-relaxed mb-8">
+
+                            Comprehensive deep-dives into corporate entities, financials, and reputation before mergers or significant acquisitions.
+
+                        </p>
+
+                        <a href="services.html" class="text-accent text-xs font-bold tracking-widest flex items-center gap-2 hover:gap-4 transition-all">
+
+                            VIEW METHODOLOGY <i class="fas fa-chevron-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Service Card 2 -->
+
+                <div class="glass-card p-0 overflow-hidden group hover-lift reveal-on-scroll bg-primary/80" style="transition-delay: 0.1s;">
+
+                    <div class="h-48 md:h-56 relative overflow-hidden">
+
+                        <img src="assets/images/background_checks_card.png" alt="Executive Background Checks" class="w-full h-full object-cover opacity-100 transition-all duration-700 group-hover:scale-105">
+
+                    </div>
+
+                    <div class="p-8">
+
+                        <h4 class="text-2xl font-bold mb-4">Background Checks</h4>
+
+                        <p class="text-secondary/60 text-sm leading-relaxed mb-8">
+
+                            Executive screening and full background audits to ensure the integrity of your most sensitive leadership hires.
+
+                        </p>
+
+                        <a href="services.html" class="text-accent text-xs font-bold tracking-widest flex items-center gap-2 hover:gap-4 transition-all">
+
+                            VIEW METHODOLOGY <i class="fas fa-chevron-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Service Card 3 -->
+
+                <div class="glass-card p-0 overflow-hidden group hover-lift reveal-on-scroll bg-primary/80" style="transition-delay: 0.2s;">
+
+                    <div class="h-48 md:h-56 relative overflow-hidden">
+
+                        <img src="assets/images/risk_profiling_card.png" alt="Corporate Risk Profiling" class="w-full h-full object-cover opacity-100 transition-all duration-700 group-hover:scale-105">
+
+                    </div>
+
+                    <div class="p-8">
+
+                        <h4 class="text-2xl font-bold mb-4">Risk Profiling</h4>
+
+                        <p class="text-secondary/60 text-sm leading-relaxed mb-8">
+
+                            Advanced algorithmic and human intelligence to identify hidden risks in supply chains and regional partnerships.
+
+                        </p>
+
+                        <a href="services.html" class="text-accent text-xs font-bold tracking-widest flex items-center gap-2 hover:gap-4 transition-all">
+
+                            VIEW METHODOLOGY <i class="fas fa-chevron-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Process Flow -->
+
+    <section class="py-20 md:py-32 border-t border-white/5 relative overflow-hidden">
+
+        <div class="absolute inset-0 grid-bg opacity-30"></div>
+
+        <div class="container mx-auto px-4 md:px-8 relative z-10">
+
+            <div class="text-center mb-20 reveal-on-scroll">
+
+                <h2 class="text-accent text-xs font-bold tracking-[0.4em] uppercase mb-4">Engagement</h2>
+
+                <h3 class="text-3xl md:text-5xl font-bold">Investigation Lifecycle</h3>
+
+            </div>
+
+
+
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-4">
+
+                <!-- Step 1 -->
+
+                <div class="flex flex-col items-center text-center max-w-xs reveal-on-scroll">
+
+                    <div class="w-20 h-20 rounded-full border-2 border-accent flex items-center justify-center text-accent text-2xl font-bold mb-6 bg-primary animate-secure-pulse">
+
+                        01
+
+                    </div>
+
+                    <h5 class="text-xl font-bold mb-3">Submit Request</h5>
+
+                    <p class="text-secondary/60 text-sm">Secure submission of intelligence requirements through our encrypted platform.</p>
+
+                </div>
+
+
+
+                <!-- Connector Line (Desktop) -->
+
+                <div class="hidden lg:block h-px w-32 bg-gradient-to-r from-accent/50 to-transparent flex-grow reveal-on-scroll"></div>
+
+
+
+                <!-- Step 2 -->
+
+                <div class="flex flex-col items-center text-center max-w-xs reveal-on-scroll" style="transition-delay: 0.2s;">
+
+                    <div class="w-20 h-20 rounded-full border-2 border-accent/30 flex items-center justify-center text-accent/50 text-2xl font-bold mb-6 bg-primary">
+
+                        02
+
+                    </div>
+
+                    <h5 class="text-xl font-bold mb-3">Investigation</h5>
+
+                    <p class="text-secondary/60 text-sm">Active gathering of primary and secondary data by our global intelligence specialists.</p>
+
+                </div>
+
+
+
+                <!-- Connector Line (Desktop) -->
+
+                <div class="hidden lg:block h-px w-32 bg-gradient-to-r from-transparent to-accent/50 flex-grow reveal-on-scroll"></div>
+
+
+
+                <!-- Step 3 -->
+
+                <div class="flex flex-col items-center text-center max-w-xs reveal-on-scroll" style="transition-delay: 0.4s;">
+
+                    <div class="w-20 h-20 rounded-full border-2 border-accent/20 flex items-center justify-center text-accent/30 text-2xl font-bold mb-6 bg-primary">
+
+                        03
+
+                    </div>
+
+                    <h5 class="text-xl font-bold mb-3">Report Delivery</h5>
+
+                    <p class="text-secondary/60 text-sm">Release of verified intelligence through our secure dashboard system.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    
+
+
+
+    <!-- Data Insight Panel -->
+
+    <section class="py-20 md:py-32 bg-accent/5 relative">
+
+        <div class="container mx-auto px-4 md:px-8">
+
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+                <div class="reveal-on-scroll">
+
+                    <h2 class="text-accent text-xs font-bold tracking-[0.4em] uppercase mb-4">Metrics of Trust</h2>
+
+                    <h3 class="text-3xl md:text-5xl font-bold mb-8">Data-Driven Investigation Results.</h3>
+
+                    <p class="text-secondary/60 text-sm md:text-lg leading-relaxed mb-10">
+
+                        Our results are quantified and verified. We maintain a rigorous standard of excellence across all regional operations.
+
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-8">
+
+                        <div>
+
+                            <div class="text-4xl md:text-6xl font-bold text-accent mb-2">99.8%</div>
+
+                            <div class="text-xs font-bold tracking-widest text-secondary/40 uppercase">Accuracy Rate</div>
+
+                        </div>
+
+                        <div>
+
+                            <div class="text-4xl md:text-6xl font-bold text-accent mb-2">12k+</div>
+
+                            <div class="text-xs font-bold tracking-widest text-secondary/40 uppercase">Global Assets Tracked</div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="relative reveal-on-scroll w-full max-w-lg mx-auto lg:ml-auto" style="transition-delay: 0.3s;">
+
+                    <!-- Layered depth effect -->
+
+                    <div class="absolute inset-0 bg-accent/5 border border-accent/20 rounded-xl transform translate-x-4 translate-y-4"></div>
+
+                    
+
+                    <!-- Main Dashboard Widget -->
+
+                    <div class="glass-card relative z-10 p-8 md:p-10 rounded-xl border-t-2 border-t-accent shadow-2xl flex flex-col gap-8 bg-primary/90">
+
+                        
+
+                        <!-- Metric 1 -->
+
+                        <div>
+
+                            <div class="flex justify-between items-end mb-3">
+
+                                <span class="text-xs md:text-sm font-bold tracking-widest uppercase text-secondary">Global Operations Sphere</span>
+
+                                <span class="text-accent font-bold">85%</span>
+
+                            </div>
+
+                            <div class="h-1.5 bg-secondary/10 rounded-full overflow-hidden">
+
+                                <div class="h-full bg-accent w-[85%] relative overflow-hidden">
+
+                                    <div class="absolute inset-0 bg-white/20 animate-data-stream"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Metric 2 -->
+
+                        <div>
+
+                            <div class="flex justify-between items-end mb-3">
+
+                                <span class="text-xs md:text-sm font-bold tracking-widest uppercase text-secondary">Compliance & Internal Audits</span>
+
+                                <span class="text-accent font-bold">94%</span>
+
+                            </div>
+
+                            <div class="h-1.5 bg-secondary/10 rounded-full overflow-hidden">
+
+                                <div class="h-full bg-accent w-[94%] relative overflow-hidden">
+
+                                    <div class="absolute inset-0 bg-white/20 animate-data-stream" style="animation-delay: 1s;"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        
+
+                        <!-- Metric 3 -->
+
+                        <div>
+
+                            <div class="flex justify-between items-end mb-3">
+
+                                <span class="text-xs md:text-sm font-bold tracking-widest uppercase text-secondary">Threat Mitigation Velocity</span>
+
+                                <span class="text-accent font-bold">99%</span>
+
+                            </div>
+
+                            <div class="h-1.5 bg-secondary/10 rounded-full overflow-hidden">
+
+                                <div class="h-full bg-accent w-[99%] relative overflow-hidden">
+
+                                    <div class="absolute inset-0 bg-white/20 animate-data-stream" style="animation-delay: 2s;"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Live Status Footer -->
+
+                        <div class="mt-2 pt-6 border-t border-accent/10 flex items-center justify-between">
+
+                            <div class="flex items-center gap-3">
+
+                                <div class="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse shadow-[0_0_10px_rgba(34,197,94,0.6)]"></div>
+
+                                <span class="text-xs font-mono text-secondary/60">ENCRYPTED TELEMETRY</span>
+
+                            </div>
+
+                            <span class="text-xs tracking-[0.2em] font-bold text-accent uppercase">Live Sync</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Section 1: Global Asset Recovery Network -->
+
+    <section class="py-24 md:py-32 bg-primary relative overflow-hidden border-b border-white/5">
+
+        <div class="absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent"></div>
+
+        <div class="container mx-auto px-4 md:px-8">
+
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+
+                <div class="lg:w-1/2 relative reveal-on-scroll">
+
+                    <!-- Radar layout with unique animation -->
+
+                    <div class="relative w-full aspect-square max-w-md mx-auto rounded-full border border-white/10 overflow-hidden shadow-[0_0_50px_rgba(15,23,42,0.5)] bg-[#0F172A]">
+
+                        <img src="assets/images/global_map_hub.png" alt="Global Network" class="w-full h-full object-cover opacity-70">
+
+                        <div class="absolute inset-0 border-4 border-accent/20 rounded-full animate-secure-pulse pointer-events-none"></div>
+
+                        <div class="absolute inset-0 bg-[#0F172A]/40 rounded-full mix-blend-multiply pointer-events-none"></div>
+
+                        <!-- Radar Sweep Animation -->
+
+                        <div class="absolute top-1/2 left-1/2 w-[150%] h-[150%] -translate-x-1/2 -translate-y-1/2 animate-radar-sweep pointer-events-none" style="background: conic-gradient(from 0deg, transparent 0deg, rgba(198, 168, 91, 0.2) 60deg, rgba(198, 168, 91, 0.8) 90deg, transparent 90deg);"></div>
+
+                        <!-- UI Overlay Nodes -->
+
+                        <div class="absolute top-1/4 left-1/4 w-3 h-3 bg-accent rounded-full animate-ping"></div>
+
+                        <div class="absolute bottom-1/3 right-1/4 w-2 h-2 bg-red-500 rounded-full animate-pulse shadow-[0_0_10px_rgba(239,68,68,1)]"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="lg:w-1/2 reveal-on-scroll" style="transition-delay: 0.2s;">
+
+                    <div class="inline-flex items-center gap-2 mb-6 text-xs font-bold tracking-[0.3em] text-accent uppercase border border-accent/20 px-3 py-1 rounded bg-accent/5">
+
+                        <i class="fas fa-globe-americas"></i> Section 01
+
+                    </div>
+
+                    <h3 class="text-3xl md:text-5xl font-bold mb-6">Global Asset <br>Recovery Network.</h3>
+
+                    <p class="text-secondary/60 text-sm md:text-lg leading-relaxed mb-8">
+
+                        Deploying rapid-response intelligence units across 140+ jurisdictions. We navigate cross-border bureaucratic labyrinths and untangle offshore corporate structures to recover hijacked or hidden enterprise assets seamlessly.
+
+                    </p>
+
+                    <ul class="space-y-4 mb-10">
+
+                        <li class="flex items-center gap-4 text-sm font-medium"><i class="fas fa-check-circle text-accent"></i> Supply Chain Hijack Resolution</li>
+
+                        <li class="flex items-center gap-4 text-sm font-medium"><i class="fas fa-check-circle text-accent"></i> Offshore Entity Unmasking</li>
+
+                        <li class="flex items-center gap-4 text-sm font-medium"><i class="fas fa-check-circle text-accent"></i> Cross-border Forensics</li>
+
+                    </ul>
+
+                    <a href="services.html" class="uppercase tracking-widest text-xs font-bold text-accent hover:text-white transition-colors border-b border-accent pb-1">Deploy Global Protocol</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Section 2: Executive Vulnerability Matrix -->
+
+    <section class="py-24 md:py-32 bg-secondary/5 relative">
+
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/30 to-transparent pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 md:px-8">
+
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
+
+                <div class="lg:w-1/2 reveal-on-scroll">
+
+                    <div class="inline-flex items-center gap-2 mb-6 text-xs font-bold tracking-[0.3em] text-accent uppercase border border-accent/20 px-3 py-1 rounded bg-accent/5">
+
+                        <i class="fas fa-fingerprint animate-pulse"></i> Section 02
+
+                    </div>
+
+                    <h3 class="text-3xl md:text-5xl font-bold mb-6 hover:animate-cyber-glitch inline-block transition-transform cursor-crosshair">Executive <br>Vulnerability Matrix.</h3>
+
+                    <p class="text-secondary/60 text-sm md:text-lg leading-relaxed mb-8">
+
+                        The greatest threats to enterprise security often bypass firewalls entirely. We conduct rigorous behavioral, financial, and digital profiling of critical C-Suite personnel to mitigate risks of corporate espionage and internal sabotage before they manifest.
+
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <div class="p-6 glass-card hover:border-red-500/50 transition-colors group">
+
+                            <i class="fas fa-biohazard text-red-500/80 text-3xl mb-4 group-hover:scale-110 transition-transform"></i>
+
+                            <h5 class="font-bold text-sm tracking-widest uppercase mb-2">Threat Vector</h5>
+
+                            <p class="text-xs text-secondary/40 font-mono">Dark web exposure & compromised credentials mapping.</p>
+
+                        </div>
+
+                        <div class="p-6 glass-card hover:border-accent/50 transition-colors group">
+
+                            <i class="fas fa-shield-virus text-accent/80 text-3xl mb-4 group-hover:scale-110 transition-transform"></i>
+
+                            <h5 class="font-bold text-sm tracking-widest uppercase mb-2">Psychological Audit</h5>
+
+                            <p class="text-xs text-secondary/40 font-mono">Behavioral anomaly detection and blackmail risk.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="lg:w-1/2 relative reveal-on-scroll" style="transition-delay: 0.2s;">
+
+                    <!-- Split panel glitch layout -->
+
+                    <div class="relative w-full overflow-hidden rounded-lg group h-[400px] md:h-[500px]">
+
+                        <img src="assets/images/executive_matrix.png" alt="Executive Matrix" class="w-full h-full object-cover transform scale-105 group-hover:scale-100 transition-transform duration-1000">
+
+                        <div class="absolute inset-0 bg-primary/20 mix-blend-color"></div>
+
+                        <!-- Cyber Glitch scanline overlay -->
+
+                        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPjxyZWN0IHdpZHRoPSI0IiBoZWlnaHQ9IjIiIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')] pointer-events-none opacity-50"></div>
+
+                        <div class="absolute inset-0 group-hover:animate-cyber-glitch pointer-events-none opacity-20 bg-accent/20 mix-blend-overlay"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Section 3: Intelligence Black Box -->
+
+    <section class="py-24 md:py-32 bg-primary relative overflow-hidden border-b border-accent/20">
+
+        <!-- Background Image Fill -->
+
+        <div class="absolute inset-0 opacity-10">
+
+            <img src="assets/images/intelligence_blackbox.png" alt="Secure Comm Node" class="w-full h-full object-cover">
+
+        </div>
+
+        <div class="absolute inset-0 bg-gradient-to-b from-primary via-primary/95 to-primary pointer-events-none"></div>
+
+
+
+        <div class="container mx-auto px-4 md:px-8 relative z-10 text-center">
+
+            <div class="max-w-4xl mx-auto">
+
+                <div class="inline-flex items-center gap-2 mb-8 text-xs font-bold tracking-[0.3em] text-accent uppercase">
+
+                    <i class="fas fa-server animate-decode-flicker"></i> Section 03 &bull; Cryptographic Zero-Knowledge Mode
+
+                </div>
+
+                <h3 class="text-4xl md:text-6xl font-bold mb-10 animate-decode-flicker">Impenetrable Comm Nodes.</h3>
+
+                
+
+                <!-- Secure Terminal Layout -->
+
+                <div class="w-full max-w-2xl mx-auto glass-card rounded-md border-t-4 border-t-accent shadow-2xl overflow-hidden text-left reveal-on-scroll">
+
+                    <div class="bg-primary/90 border-b border-white/10 px-4 py-3 flex items-center justify-between">
+
+                        <div class="flex gap-2">
+
+                            <div class="w-3 h-3 rounded-full bg-red-500/50"></div>
+
+                            <div class="w-3 h-3 rounded-full bg-yellow-500/50"></div>
+
+                            <div class="w-3 h-3 rounded-full bg-green-500/50"></div>
+
+                        </div>
+
+                        <span class="text-xs text-secondary/40 font-mono tracking-widest uppercase">System Terminal // Root</span>
+
+                    </div>
+
+                    <div class="p-6 md:p-8 font-mono text-xs md:text-sm text-secondary/60 space-y-4">
+
+                        <p class="animate-decode-flicker" style="animation-duration: 4s;">> Initialization protocol sequence starting...</p>
+
+                        <p class="animate-decode-flicker text-accent" style="animation-duration: 3s; animation-delay: 0.5s;">> Establishing zero-knowledge cryptographic tunnel.</p>
+
+                        <p class="leading-relaxed text-secondary/80 animate-decode-flicker" style="animation-duration: 5s; animation-delay: 1s;">
+
+                            All intelligence gathered is transferred through military-grade, fully air-gapped internal server architecture. We enforce a non-disclosure, self-immolating data retention policy upon contract completion ensuring zero trace of your inquiry exists.
+
+                        </p>
+
+                        <p class="text-white pt-4 border-t border-white/10">> Status: <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded">READY FOR SECURE INTAKE</span><span class="inline-block w-2 h-4 bg-accent ml-1 animate-pulse align-middle"></span></p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="mt-16 reveal-on-scroll" style="transition-delay: 0.3s;">
+
+                    <a href="contact.html" class="btn-primary py-5 px-12 text-sm md:text-base tracking-widest group shadow-[0_0_30px_rgba(198,168,91,0.2)]">
+
+                        INITIATE SECURE CHAT
+
+                        <i class="fas fa-lock ml-3 group-hover:scale-110 transition-transform"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="py-10 border-t border-white/5 bg-primary/80">
+
+        <div class="container mx-auto px-4 md:px-8 grid md:grid-cols-4 gap-12">
+
+            <div class="md:col-span-2">
+
+                <div class="flex items-center gap-2 mb-4">
+
+                    <div class="w-10 h-10 bg-accent rounded flex items-center justify-center text-primary font-bold text-lg transform rotate-45">
+
+                        <span class="-rotate-45">C</span>
+
+                    </div>
+
+                    <div class="flex flex-col">
+
+                        <span class="text-lg font-bold tracking-widest text-secondary -mb-1">CORPORATE</span>
+
+                        <span class="text-xs tracking-[0.3em] text-accent font-medium">INVESTIGATION</span>
+
+                    </div>
+
+                </div>
+
+                <p class="text-secondary/40 text-sm leading-relaxed max-w-sm">
+
+                    Registered intelligence agency specializing in enterprise-scale investigations, risk mitigation, and executive due diligence since 2008.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h6 class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-8">DIRECT LINKS</h6>
+
+                <ul class="space-y-4">
+
+                    <li><a href="about.html" class="text-sm text-secondary/60 hover:text-accent transition-colors">Firm Overview</a></li>
+
+                    <li><a href="services.html" class="text-sm text-secondary/60 hover:text-accent transition-colors">Core Methodologies</a></li>
+
+                    <li><a href="investigations.html" class="text-sm text-secondary/60 hover:text-accent transition-colors">Case Types</a></li>
+
+                    <li><a href="reports.html" class="text-sm text-secondary/60 hover:text-accent transition-colors">Sample Data</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h6 class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-8">LEGAL & PRIVACY</h6>
+
+                <ul class="space-y-4">
+
+                    <li><a href="#" class="text-sm text-secondary/60 hover:text-accent transition-colors">Compliance Protocol</a></li>
+
+                    <li><a href="#" class="text-sm text-secondary/60 hover:text-accent transition-colors">Privacy Information</a></li>
+
+                    <li><a href="#" class="text-sm text-secondary/60 hover:text-accent transition-colors">Terms of Engagement</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="container mx-auto px-4 md:px-8 mt-8 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+
+            <div class="text-xs tracking-[0.2em] font-medium text-secondary/20 uppercase">
+
+                &copy; 2026 CORPORATE INVESTIGATION FIRM. ALL RIGHTS RESERVED.
+
+            </div>
+
+            <div class="flex gap-6">
+
+                <a href="#" class="text-secondary/20 hover:text-accent transition-colors"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="#" class="text-secondary/20 hover:text-accent transition-colors"><i class="fab fa-twitter"></i></a>
+
+                <a href="#" class="text-secondary/20 hover:text-accent transition-colors"><i class="fas fa-lock"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr" data-theme="dark">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Corporate Investigation Firm</title>
+
+    <meta name="description" content="Securely contact our intelligence agency for confidential inquiries.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/theme.css">
+
+    <link rel="stylesheet" href="assets/css/rtl.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+                        primary: 'rgb(var(--primary-rgb) / <alpha-value>)',
+
+                        secondary: 'rgb(var(--secondary-rgb) / <alpha-value>)',
+
+                        accent: 'rgb(var(--accent-rgb) / <alpha-value>)',
+
+                        white: 'rgb(var(--text-main-rgb) / <alpha-value>)',
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+
+
+
+
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+</head>
+
+<body class="bg-primary text-white overflow-x-hidden">
+
+    <!-- Navigation (Shared) -->
+
+    <nav class="fixed top-0 w-full z-50 glass-card bg-primary/95 border-b border-white/10 h-16 md:h-20 flex items-center">
+
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center h-full">
+
+            <div class="flex items-center gap-2">
+
+                <div class="w-10 h-10 bg-accent rounded flex items-center justify-center text-primary font-bold text-lg md:text-xl transform rotate-45">
+
+                    <span class="-rotate-45">C</span>
+
+                </div>
+
+                <div class="flex flex-col">
+
+                    <span class="text-lg font-bold tracking-widest text-secondary -mb-1">CORPORATE</span>
+
+                    <span class="text-xs tracking-[0.3em] text-accent font-medium">INVESTIGATION</span>
+
+                </div>
+
+            </div>
+
+
+
+            
+            <!-- Center Navigation Links -->
+            <div class="hidden xl:flex items-center gap-6 xl:gap-10 h-full absolute left-1/2 -translate-x-1/2">
+                <!-- Home Dropdown -->
+                <div class="relative group/home">
+                    <button class="nav-link text-xs xl:text-sm font-semibold tracking-widest text-secondary hover:text-accent flex items-center gap-1.5">
+                        HOME <i class="fas fa-chevron-down text-[9px] transition-transform duration-200 group-hover/home:rotate-180"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-2 w-36 bg-primary/95 backdrop-blur-xl border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.6)] opacity-0 invisible group-hover/home:opacity-100 group-hover/home:visible transition-all duration-200 z-50">
+                        <a href="index.html" class="flex items-center gap-2 px-4 py-3 text-xs font-semibold tracking-widest text-secondary hover:text-accent hover:bg-white/5 transition-colors border-b border-white/10">
+                            <i class="fas fa-circle text-[5px] text-accent"></i> HOME 1
+                        </a>
+                        <a href="home-2.html" class="flex items-center gap-2 px-4 py-3 text-xs font-semibold tracking-widest text-secondary hover:text-accent hover:bg-white/5 transition-colors">
+                            <i class="fas fa-circle text-[5px] text-accent"></i> HOME 2
+                        </a>
+                    </div>
+                </div>
+                <a href="about.html" class="nav-link text-xs xl:text-sm font-semibold tracking-widest text-secondary hover:text-accent ">ABOUT</a>
+                <a href="services.html" class="nav-link text-xs xl:text-sm font-semibold tracking-widest text-secondary hover:text-accent ">SERVICES</a>
+                <a href="investigations.html" class="nav-link text-xs xl:text-sm font-semibold tracking-widest text-secondary hover:text-accent ">INVESTIGATIONS</a>
+                <a href="reports.html" class="nav-link text-xs xl:text-sm font-semibold tracking-widest text-secondary hover:text-accent ">REPORTS</a>
+                <a href="contact.html" class="nav-link text-xs xl:text-sm font-semibold tracking-widest text-secondary hover:text-accent border-b border-accent">CONTACT</a>
+            </div>
+            <!-- Right Side Tools & Login -->
+            <div class="flex items-center gap-4 xl:gap-8 ml-auto">
+                <div class="hidden xl:flex items-center gap-4 xl:gap-6 border-l border-white/20 pl-4 xl:pl-6">
+                    <a href="dashboard.html" title="Dashboard" class="text-secondary hover:text-accent transition-colors"><i class="fas fa-chart-line text-lg"></i></a>
+                    <button id="rtl-toggle" title="RTL" class="text-secondary hover:text-accent transition-colors"><i class="fas fa-language text-xl"></i></button>
+                    <button id="theme-toggle" title="Theme" class="text-secondary hover:text-accent transition-colors"><i class="fas fa-moon text-lg"></i></button>
+                    <a href="login.html" class="btn-primary text-xs tracking-widest px-6 py-2">LOGIN</a>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="hamburger" class="xl:hidden text-secondary text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+
+
+
+            </nav>
+
+
+
+    <!-- Mobile Drawer Overlay -->
+
+    <div id="mobile-drawer-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] hidden opacity-0 transition-opacity duration-300"></div>
+
+
+
+    <!-- Right Side Sliding Drawer -->
+
+    <div id="mobile-drawer" class="fixed top-0 right-0 h-[100dvh] w-3/4 max-w-[350px] bg-primary/95 backdrop-blur-xl border-l border-white/10 z-[70] transform translate-x-full transition-transform duration-300 flex flex-col shadow-[rgba(0,0,0,0.8)_0px_0px_50px]">
+
+        <!-- Drawer Header -->
+
+        <div class="flex items-center justify-between p-6 border-b border-white/10">
+
+            <div class="flex items-center gap-2">
+
+                <div class="w-10 h-10 bg-accent rounded flex items-center justify-center text-primary font-bold text-lg transform rotate-45 animate-secure-pulse">
+
+                    <span class="-rotate-45">C</span>
+
+                </div>
+
+                <div class="flex flex-col">
+
+                    <span class="text-lg font-bold tracking-widest text-secondary -mb-1">CORPORATE</span>
+
+                    <span class="text-xs tracking-[0.3em] text-accent font-medium">INVESTIGATION</span>
+
+                </div>
+
+            </div>
+
+            <button id="close-drawer" class="text-secondary hover:text-accent text-2xl transition-colors cursor-pointer">
+
+                <i class="fas fa-times pointer-events-none"></i>
+
+            </button>
+
+        </div>
+
+
+
+        <!-- Drawer Content -->
+
+        <div class="flex-1 overflow-y-auto py-8 px-6 flex flex-col gap-6">
+
+            <!-- Drawer Home Dropdown -->
+            <div class="drawer-dropdown">
+                <button class="drawer-dd-trigger w-full flex items-center justify-between text-sm font-semibold tracking-widest text-secondary hover:text-white transition-colors">
+                    HOME <i class="fas fa-chevron-down text-xs text-accent transition-transform duration-300 drawer-dd-icon"></i>
+                </button>
+                <div class="drawer-dd-panel mt-3 ml-3 border-l border-accent/30 pl-4 space-y-3 overflow-hidden max-h-0 transition-[max-height] duration-300 ease-in-out">
+                    <a href="index.html" class="block text-xs font-semibold tracking-widest text-secondary/70 hover:text-accent transition-colors">HOME 1</a>
+                    <a href="home-2.html" class="block text-xs font-semibold tracking-widest text-secondary/70 hover:text-accent transition-colors">HOME 2</a>
+                </div>
+            </div>
+
+            <a href="about.html" class="text-sm font-semibold tracking-widest text-secondary hover:text-white transition-colors">ABOUT</a>
+
+            <a href="services.html" class="text-sm font-semibold tracking-widest text-secondary hover:text-white transition-colors">SERVICES</a>
+
+            <a href="investigations.html" class="text-sm font-semibold tracking-widest text-secondary hover:text-white transition-colors">INVESTIGATIONS</a>
+
+            <a href="reports.html" class="text-sm font-semibold tracking-widest text-secondary hover:text-white transition-colors">REPORTS</a>
+
+            <a href="contact.html" class="text-sm font-semibold tracking-widest text-secondary hover:text-white transition-colors">CONTACT</a>
+
+            
+
+            <div class="border-t border-white/10 my-2"></div>
+
+            
+
+            <!-- Icon-only row: Dashboard + RTL + Theme -->
+
+            <div class="flex items-center gap-3">
+
+                <a href="dashboard.html" title="Dashboard" class="w-10 h-10 flex items-center justify-center rounded border border-white/10 text-secondary hover:text-accent hover:border-accent/50 transition-all duration-200">
+
+                    <i class="fas fa-chart-line text-base"></i>
+
+                </a>
+
+                <button id="drawer-rtl-toggle" title="Switch RTL/LTR" class="w-10 h-10 flex items-center justify-center rounded border border-white/10 text-secondary hover:text-accent hover:border-accent/50 transition-all duration-200">
+
+                    <i class="fas fa-language text-lg"></i>
+
+                </button>
+
+                <button id="drawer-theme-toggle" title="Toggle Theme" class="w-10 h-10 flex items-center justify-center rounded border border-white/10 text-secondary hover:text-accent hover:border-accent/50 transition-all duration-200">
+
+                    <i class="fas fa-moon text-base theme-icon-drawer"></i>
+
+                </button>
+
+                <a href="login.html" class="btn-primary flex-1 min-w-[80px] py-2 text-xs tracking-widest uppercase flex justify-center items-center text-center font-bold h-10">LOGIN</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Hero Header -->
+
+    <section class="pt-40 pb-12 border-b border-white/5 relative">
+
+        <div class="absolute inset-0 grid-bg opacity-10 pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 md:px-8 relative z-10 flex flex-col items-center text-center">
+
+            <div class="inline-flex items-center gap-2 mb-6 border border-white/10 bg-white/5 px-4 py-1 rounded-full text-xs font-bold tracking-widest text-secondary/60 uppercase">
+
+                <i class="fas fa-lock text-accent"></i> Secure Channel
+
+            </div>
+
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Initiate Protocol.</h1>
+
+            <p class="text-secondary/60 text-lg max-w-2xl">Submit your preliminary inquiry below. A senior strategic director will contact you via a secure line within 4 hours.</p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Contact Layout -->
+
+    <section class="py-24 border-b border-white/5 relative">
+
+        <div class="absolute inset-0 grid-bg opacity-10 pointer-events-none"></div>
+
+        <div class="container mx-auto px-4 md:px-8 relative z-10 grid lg:grid-cols-2 gap-16">
+
+            
+
+            <!-- Info Text -->
+
+            <div class="reveal-on-scroll">
+
+                <div class="inline-flex items-center gap-2 mb-6 border border-accent/30 bg-accent/5 px-4 py-1 text-xs font-bold tracking-widest text-accent uppercase">
+
+                    <i class="fas fa-satellite-dish text-accent"></i> Direct Lines
+
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Reach Us Securely.</h2>
+
+                <p class="text-secondary/60 text-base mb-8">
+
+                    Our senior operatives monitor all intake channels around the clock. Select your preferred secure communication method below.
+
+                </p>
+
+
+
+                <!-- Contact Cards -->
+
+                <div class="space-y-4 mb-10">
+
+                    <!-- Card 1: HQ -->
+
+                    <div class="group glass-card border border-white/10 hover:border-accent/50 p-5 flex items-start gap-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(198,168,91,0.1)]">
+
+                        <div class="w-12 h-12 bg-accent/10 border border-accent/30 flex items-center justify-center text-accent rounded shrink-0 group-hover:bg-accent group-hover:text-primary transition-all duration-300">
+
+                            <i class="fas fa-building-shield text-lg"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5 class="font-bold mb-1 group-hover:text-accent transition-colors duration-300">Global Headquarters</h5>
+
+                            <p class="text-secondary/60 text-sm leading-relaxed">Level 42, The Intelligence Building<br>London, EC2N 4AY, United Kingdom</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Card 2: Email -->
+
+                    <div class="group glass-card border border-white/10 hover:border-accent/50 p-5 flex items-start gap-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(198,168,91,0.1)]">
+
+                        <div class="w-12 h-12 bg-accent/10 border border-accent/30 flex items-center justify-center text-accent rounded shrink-0 group-hover:bg-accent group-hover:text-primary transition-all duration-300">
+
+                            <i class="fas fa-envelope-open-text text-lg"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5 class="font-bold mb-1 group-hover:text-accent transition-colors duration-300">Secure Dispatch</h5>
+
+                            <p class="text-secondary/60 text-sm">operations@corporateinvestigation.com</p>
+
+                            <p class="text-secondary/40 text-xs mt-0.5">PGP Key Available Upon Request</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Card 3: Phone -->
+
+                    <div class="group glass-card border border-white/10 hover:border-accent/50 p-5 flex items-start gap-5 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(198,168,91,0.1)]">
+
+                        <div class="w-12 h-12 bg-accent/10 border border-accent/30 flex items-center justify-center text-accent rounded shrink-0 group-hover:bg-accent group-hover:text-primary transition-all duration-300">
+
+                            <i class="fas fa-phone-volume text-lg"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5 class="font-bold mb-1 group-hover:text-accent transition-colors duration-300">Emergency Intake (24/7)</h5>
+
+                            <p class="text-secondary/60 text-sm">+44 (0) 20 7946 0812</p>
+
+                            <p class="text-secondary/40 text-xs mt-0.5">Encrypted voice lines available</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Social Media Row -->
+
+                <div>
+
+                    <p class="text-xs font-bold tracking-[0.3em] text-secondary/30 uppercase mb-4">Follow Operations</p>
+
+                    <div class="flex items-center gap-3">
+
+                        <a href="#" title="LinkedIn" class="group w-11 h-11 rounded border border-white/10 flex items-center justify-center text-secondary/40 hover:border-[#0A66C2] hover:text-[#0A66C2] hover:bg-[#0A66C2]/10 transition-all duration-300">
+
+                            <i class="fab fa-linkedin-in text-lg"></i>
+
+                        </a>
+
+                        <a href="#" title="Twitter / X" class="group w-11 h-11 rounded border border-white/10 flex items-center justify-center text-secondary/40 hover:border-white hover:text-white hover:bg-white/5 transition-all duration-300">
+
+                            <i class="fab fa-x-twitter text-lg"></i>
+
+                        </a>
+
+                        <a href="#" title="Signal" class="group w-11 h-11 rounded border border-white/10 flex items-center justify-center text-secondary/40 hover:border-[#3a76f0] hover:text-[#3a76f0] hover:bg-[#3a76f0]/10 transition-all duration-300">
+
+                            <i class="fas fa-comment-dots text-lg"></i>
+
+                        </a>
+
+                        <a href="#" title="ProtonMail" class="group w-11 h-11 rounded border border-white/10 flex items-center justify-center text-secondary/40 hover:border-[#8B5CF6] hover:text-[#8B5CF6] hover:bg-[#8B5CF6]/10 transition-all duration-300">
+
+                            <i class="fas fa-shield-halved text-lg"></i>
+
+                        </a>
+
+                        <a href="#" title="Telegram" class="group w-11 h-11 rounded border border-white/10 flex items-center justify-center text-secondary/40 hover:border-[#26A5E4] hover:text-[#26A5E4] hover:bg-[#26A5E4]/10 transition-all duration-300">
+
+                            <i class="fab fa-telegram text-lg"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Contact Form -->
+
+            <div class="reveal-on-scroll" style="transition-delay: 0.2s;">
+
+                <div class="glass-card p-8 md:p-10 border-t-4 border-t-accent shadow-2xl">
+
+                    <h3 class="text-2xl font-bold mb-8">Confidential Inquiry</h3>
+
+                    <form class="space-y-6">
+
+                        <div class="grid md:grid-cols-2 gap-6">
+
+                            <div>
+
+                                <label class="block text-xs font-bold tracking-widest uppercase text-secondary/60 mb-2">Corporate Entity / Name *</label>
+
+                                <input type="text" class="w-full bg-primary border border-white/10 p-4 font-sm text-white rounded input-accent focus:bg-primary/80" required>
+
+                            </div>
+
+                            <div>
+
+                                <label class="block text-xs font-bold tracking-widest uppercase text-secondary/60 mb-2">Direct Phone Line *</label>
+
+                                <input type="tel" class="w-full bg-primary border border-white/10 p-4 font-sm text-white rounded input-accent focus:bg-primary/80" required>
+
+                            </div>
+
+                        </div>
+
+                        <div>
+
+                            <label class="block text-xs font-bold tracking-widest uppercase text-secondary/60 mb-2">Secure Email Address *</label>
+
+                            <input type="email" class="w-full bg-primary border border-white/10 p-4 font-sm text-white rounded input-accent focus:bg-primary/80" required>
+
+                        </div>
+
+                        <div>
+
+                            <label class="block text-xs font-bold tracking-widest uppercase text-secondary/60 mb-2">Requirement Classification</label>
+
+                            <select class="w-full bg-primary border border-white/10 p-4 font-sm text-secondary/60 rounded focus:border-accent focus:outline-none appearance-none cursor-pointer">
+
+                                <option>Due Diligence & Background</option>
+
+                                <option>Asset Tracing</option>
+
+                                <option>Litigation Support</option>
+
+                                <option>Corporate Fraud</option>
+
+                                <option>General Consultation</option>
+
+                            </select>
+
+                        </div>
+
+                        <div>
+
+                            <label class="block text-xs font-bold tracking-widest uppercase text-secondary/60 mb-2">Brief Context (Do not include extreme sensitive data yet)</label>
+
+                            <textarea rows="4" class="w-full bg-primary border border-white/10 p-4 font-sm text-white rounded input-accent focus:bg-primary/80"></textarea>
+
+                        </div>
+
+                        
+
+                        <div class="flex items-start gap-3 mb-6">
+
+                            <input type="checkbox" id="nda" class="mt-1 accent-accent" required>
+
+                            <label for="nda" class="text-xs text-secondary/40">I understand that submitting this form does not establish an immediate firm-client operational relationship. Information will be kept under strict NDA.</label>
+
+                        </div>
+
+
+
+                        <button type="submit" class="w-full btn-primary text-sm tracking-widest py-4">TRANSMIT REQUEST</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FAQ -->
+
+    <section class="py-24 bg-accent/5">
+
+        <div class="container mx-auto px-4 md:px-8 max-w-4xl">
+
+            <div class="text-center mb-16 reveal-on-scroll">
+
+                <h2 class="text-accent text-xs font-bold tracking-[0.4em] uppercase mb-4">Onboarding</h2>
+
+                <h3 class="text-3xl font-bold">Frequently Asked Questions</h3>
+
+            </div>
+
+            
+
+            <div class="space-y-3 reveal-on-scroll" style="transition-delay: 0.2s;">
+
+
+
+                <div class="faq-item glass-card border border-white/10 transition-all duration-300 overflow-hidden">
+
+                    <button class="faq-trigger w-full flex items-center justify-between p-6 text-left group">
+
+                        <span class="text-base font-bold group-hover:text-accent transition-colors pr-4">Are my inquiries completely confidential?</span>
+
+                        <i class="faq-icon fas fa-plus text-accent shrink-0 transition-transform duration-300"></i>
+
+                    </button>
+
+                    <div class="faq-answer max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out">
+
+                        <p class="text-secondary/60 text-sm leading-relaxed px-6 pb-6">Yes. Before any granular details are discussed, we execute a mutual strict Non-Disclosure Agreement (NDA). We utilize encrypted communication frameworks standard in federal intelligence.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="faq-item glass-card border border-white/10 transition-all duration-300 overflow-hidden">
+
+                    <button class="faq-trigger w-full flex items-center justify-between p-6 text-left group">
+
+                        <span class="text-base font-bold group-hover:text-accent transition-colors pr-4">How quickly can an operation commence?</span>
+
+                        <i class="faq-icon fas fa-plus text-accent shrink-0 transition-transform duration-300"></i>
+
+                    </button>
+
+                    <div class="faq-answer max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out">
+
+                        <p class="text-secondary/60 text-sm leading-relaxed px-6 pb-6">Standard onboarding takes 24 hours. For emergency corporate crisis situations (e.g., active hostile takeover or urgent data leak), a rapid response team can be deployed within 4 hours globally.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="faq-item glass-card border border-white/10 transition-all duration-300 overflow-hidden">
+
+                    <button class="faq-trigger w-full flex items-center justify-between p-6 text-left group">
+
+                        <span class="text-base font-bold group-hover:text-accent transition-colors pr-4">Do you operate in restricted jurisdictions?</span>
+
+                        <i class="faq-icon fas fa-plus text-accent shrink-0 transition-transform duration-300"></i>
+
+                    </button>
+
+                    <div class="faq-answer max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out">
+
+                        <p class="text-secondary/60 text-sm leading-relaxed px-6 pb-6">We maintain a network of verified operatives in 142 countries, including emerging markets and complex offshore financial centers. Specific operational viability is assessed case-by-case.</p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="faq-item glass-card border border-white/10 transition-all duration-300 overflow-hidden">
+
+                    <button class="faq-trigger w-full flex items-center justify-between p-6 text-left group">
+
+                        <span class="text-base font-bold group-hover:text-accent transition-colors pr-4">Is your gathered intelligence legally admissible?</span>
+
+                        <i class="faq-icon fas fa-plus text-accent shrink-0 transition-transform duration-300"></i>
+
+                    </button>
+
+                    <div class="faq-answer max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out">
+
+                        <p class="text-secondary/60 text-sm leading-relaxed px-6 pb-6">Absolutely. We operate strictly within legal frameworks (GDPR, FCPA, UK Bribery Act). Evidence is gathered maintaining a pristine chain of custody suitable for high court litigation.</p>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Global HQ Map -->
+
+    <section class="relative border-t border-white/5">
+
+        <!-- Top accent bar -->
+
+        <div class="w-full h-1 bg-gradient-to-r from-transparent via-accent to-transparent"></div>
+
+
+
+        <!-- Map Header -->
+
+        <div class="bg-primary py-10 px-4 md:px-8 text-center">
+
+            <h2 class="text-accent text-xs font-bold tracking-[0.5em] uppercase mb-3">Global Operations</h2>
+
+            <h3 class="text-2xl md:text-3xl font-bold">Find Our Headquarters</h3>
+
+        </div>
+
+
+
+        <!-- Map + Info Wrapper -->
+
+        <div class="relative">
+
+            <!-- Google Map Embed -->
+
+            <iframe
+
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.9099295082717!2d-0.09075908422918604!3d51.51450027963673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760352d9b5e0e5%3A0xa4f508fb1af3e906!2sBank%2C%20London!5e0!3m2!1sen!2suk!4v1711800000000!5m2!1sen!2suk"
+
+                width="100%"
+
+                height="480"
+
+                style="border:0; display:block; filter: contrast(1.05) saturate(0.95);"
+
+                allowfullscreen=""
+
+                loading="lazy"
+
+                referrerpolicy="no-referrer-when-downgrade"
+
+                title="Corporate Investigation Firm - Global HQ London">
+
+            </iframe>
+
+
+
+            <!-- Overlay Info Card -->
+
+            <div class="absolute top-6 left-6 md:top-10 md:left-10 glass-card bg-primary/95 backdrop-blur-xl border border-white/10 border-l-2 border-l-accent p-6 max-w-xs shadow-[0_20px_60px_rgba(0,0,0,0.7)] z-10">
+
+                <div class="flex items-center gap-2 mb-4">
+
+                    <div class="w-2 h-2 rounded-full bg-accent animate-pulse"></div>
+
+                    <span class="text-[9px] font-bold tracking-[0.3em] text-accent uppercase">Global HQ</span>
+
+                </div>
+
+                <h4 class="text-base font-bold mb-1">Corporate Investigation Firm</h4>
+
+                <p class="text-secondary/60 text-xs leading-relaxed mb-4">
+
+                    Level 42, The Intelligence Building<br>
+
+                    Bank, London, EC2N 4AY<br>
+
+                    United Kingdom
+
+                </p>
+
+                <a href="https://www.google.com/maps/search/Bank+London+EC2N" target="_blank" rel="noopener noreferrer"
+
+                   class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-accent uppercase hover:gap-4 transition-all">
+
+                    Get Directions <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer (Shared) -->
+
+    <footer class="py-10 border-t border-white/5 bg-primary/80">
+
+        <div class="container mx-auto px-4 md:px-8 grid md:grid-cols-4 gap-12">
+
+            <div class="md:col-span-2">
+
+                <div class="flex items-center gap-2 mb-4">
+
+                    <div class="w-10 h-10 bg-accent rounded flex items-center justify-center text-primary font-bold text-lg transform rotate-45">
+
+                        <span class="-rotate-45">C</span>
+
+                    </div>
+
+                    <div class="flex flex-col">
+
+                        <span class="text-lg font-bold tracking-widest text-secondary -mb-1">CORPORATE</span>
+
+                        <span class="text-xs tracking-[0.3em] text-accent font-medium">INVESTIGATION</span>
+
+                    </div>
+
+                </div>
+
+                <p class="text-secondary/40 text-sm leading-relaxed max-w-sm">
+
+                    Registered intelligence agency specializing in enterprise-scale investigations, risk mitigation, and executive due diligence since 2008.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h6 class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-8">DIRECT LINKS</h6>
+
+                <ul class="space-y-4">
+
+                    <li><a href="about.html" class="text-sm text-secondary/60 hover:text-accent transition-colors">Firm Overview</a></li>
+
+                    <li><a href="services.html" class="text-sm text-secondary/60 hover:text-accent transition-colors">Core Methodologies</a></li>
+
+                    <li><a href="investigations.html" class="text-sm text-secondary/60 hover:text-accent transition-colors">Case Types</a></li>
+
+                    <li><a href="reports.html" class="text-sm text-secondary/60 hover:text-accent transition-colors">Sample Data</a></li>
+
+                </ul>
+
+            </div>
+
+            <div>
+
+                <h6 class="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-8">LEGAL & PRIVACY</h6>
+
+                <ul class="space-y-4">
+
+                    <li><a href="#" class="text-sm text-secondary/60 hover:text-accent transition-colors">Compliance Protocol</a></li>
+
+                    <li><a href="#" class="text-sm text-secondary/60 hover:text-accent transition-colors">Privacy Information</a></li>
+
+                    <li><a href="#" class="text-sm text-secondary/60 hover:text-accent transition-colors">Terms of Engagement</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="container mx-auto px-4 md:px-8 mt-8 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+
+            <div class="text-xs tracking-[0.2em] font-medium text-secondary/20 uppercase">
+
+                &copy; 2026 CORPORATE INVESTIGATION FIRM. ALL RIGHTS RESERVED.
+
+            </div>
+
+            <div class="flex gap-6">
+
+                <a href="#" class="text-secondary/20 hover:text-accent transition-colors"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="#" class="text-secondary/20 hover:text-accent transition-colors"><i class="fab fa-twitter"></i></a>
+
+                <a href="#" class="text-secondary/20 hover:text-accent transition-colors"><i class="fas fa-lock"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="assets/js/main.js"></script>
+
+    <script>
+
+        // FAQ Accordion
+
+        document.querySelectorAll('.faq-trigger').forEach(trigger => {
+
+            trigger.addEventListener('click', () => {
+
+                const item = trigger.closest('.faq-item');
+
+                const answer = item.querySelector('.faq-answer');
+
+                const icon = item.querySelector('.faq-icon');
+
+                const isOpen = item.classList.contains('faq-open');
+
+
+
+                // Close all
+
+                document.querySelectorAll('.faq-item').forEach(el => {
+
+                    el.classList.remove('faq-open', 'border-accent/40');
+
+                    el.classList.add('border-white/10');
+
+                    el.querySelector('.faq-answer').style.maxHeight = '0';
+
+                    el.querySelector('.faq-icon').classList.remove('rotate-45');
+
+                });
+
+
+
+                // Open clicked if it was closed
+
+                if (!isOpen) {
+
+                    item.classList.add('faq-open', 'border-accent/40');
+
+                    item.classList.remove('border-white/10');
+
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+
+                    icon.classList.add('rotate-45');
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
+

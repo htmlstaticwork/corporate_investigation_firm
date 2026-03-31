@@ -1,0 +1,25 @@
+/* Corporate Investigation Firm - RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .ml-auto {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+[dir="rtl"] .mr-auto {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+/* Logical property overrides for specific cases where Tailwind classes might not be enough or need explicit handling */
+.rtl-mirror {
+  margin-inline-start: auto;
+  padding-inline-end: 2rem;
+  text-align: start;
+}
+
+[dir="rtl"] .transform-rtl {
+  transform: scaleX(-1);
+}

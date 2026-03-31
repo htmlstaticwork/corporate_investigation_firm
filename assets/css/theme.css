@@ -1,0 +1,42 @@
+:root {
+  /* Dark Mode (Default) RGB Values */
+  --primary-rgb: 15 23 42;      /* #0F172A */
+  --secondary-rgb: 226 232 240; /* #E2E8F0 */
+  --accent-rgb: 198 168 91;     /* #C6A85B */
+  --text-main-rgb: 248 250 252; /* #F8FAFC */
+  
+  --bg-primary: rgb(var(--primary-rgb));
+  --bg-secondary: rgb(var(--secondary-rgb));
+  --text-main: rgb(var(--text-main-rgb));
+  --text-dim: #94A3B8;
+  --card-bg: rgba(var(--secondary-rgb), 0.05);
+  --card-border: rgba(var(--secondary-rgb), 0.1);
+}
+
+[data-theme="light"] {
+  /* Light Mode RGB Values */
+  --primary-rgb: 248 250 252;   /* #F8FAFC (clean white background) */
+  --secondary-rgb: 15 23 42;    /* #0F172A (dark text / cards) */
+  --text-main-rgb: 15 23 42;    /* #0F172A (dark text) */
+  
+  --text-dim: #475569;
+  --card-bg: rgba(var(--secondary-rgb), 0.05);
+  --card-border: rgba(var(--secondary-rgb), 0.1);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="light"] body {
+    background-color: rgb(var(--primary-rgb));
+    color: rgb(var(--text-main-rgb));
+}
+
+.text-dim { color: var(--text-dim); }
+.glass-card { 
+  background: var(--card-bg);
+  border-color: var(--card-border);
+}
