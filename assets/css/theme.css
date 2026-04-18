@@ -1,7 +1,7 @@
 :root {
   /* Dark Mode (Default) RGB Values */
   --primary-rgb: 0 0 0;         /* #000000 */
-  --secondary-rgb: 255 255 255; /* #FFFFFF */
+  --secondary-rgb: 220 220 220; /* darker secondary text tone for dark theme */
   --accent-rgb: 198 168 91;     /* #C6A85B */
   --text-main-rgb: 255 255 255; /* #FFFFFF */
   
@@ -11,17 +11,25 @@
   --text-dim: #FFFFFF;
   --card-bg: rgba(var(--secondary-rgb), 0.05);
   --card-border: rgba(var(--secondary-rgb), 0.1);
+  --secondary-20-readable: 0.42;
+  --secondary-40-readable: 0.68;
+  --secondary-50-readable: 0.78;
+  --secondary-60-readable: 0.86;
 }
 
 [data-theme="light"] {
   /* Light Mode RGB Values */
   --primary-rgb: 248 250 252;   /* #F8FAFC (clean white background) */
-  --secondary-rgb: 15 23 42;    /* #0F172A (dark text / cards) */
+  --secondary-rgb: 0 0 0;       /* #000000 (darker secondary text for light mode) */
   --text-main-rgb: 15 23 42;    /* #0F172A (dark text) */
   
   --text-dim: #475569;
   --card-bg: rgba(var(--secondary-rgb), 0.05);
   --card-border: rgba(var(--secondary-rgb), 0.1);
+  --secondary-20-readable: 0.50;
+  --secondary-40-readable: 0.76;
+  --secondary-50-readable: 0.84;
+  --secondary-60-readable: 0.90;
 }
 
 body {
@@ -59,4 +67,21 @@ body {
 
 [data-theme="light"] .hero-secondary-btn {
   border-color: rgb(var(--accent-rgb) / 0.7);
+}
+
+/* Improve readability for commonly used secondary utility-opacity text classes */
+[class*="text-secondary/20"] {
+  color: rgb(var(--secondary-rgb) / var(--secondary-20-readable)) !important;
+}
+
+[class*="text-secondary/40"] {
+  color: rgb(var(--secondary-rgb) / var(--secondary-40-readable)) !important;
+}
+
+[class*="text-secondary/50"] {
+  color: rgb(var(--secondary-rgb) / var(--secondary-50-readable)) !important;
+}
+
+[class*="text-secondary/60"] {
+  color: rgb(var(--secondary-rgb) / var(--secondary-60-readable)) !important;
 }
