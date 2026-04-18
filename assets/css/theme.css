@@ -1,14 +1,14 @@
 :root {
   /* Dark Mode (Default) RGB Values */
-  --primary-rgb: 15 23 42;      /* #0F172A */
-  --secondary-rgb: 226 232 240; /* #E2E8F0 */
+  --primary-rgb: 0 0 0;         /* #000000 */
+  --secondary-rgb: 255 255 255; /* #FFFFFF */
   --accent-rgb: 198 168 91;     /* #C6A85B */
-  --text-main-rgb: 248 250 252; /* #F8FAFC */
+  --text-main-rgb: 255 255 255; /* #FFFFFF */
   
   --bg-primary: rgb(var(--primary-rgb));
   --bg-secondary: rgb(var(--secondary-rgb));
   --text-main: rgb(var(--text-main-rgb));
-  --text-dim: #94A3B8;
+  --text-dim: #FFFFFF;
   --card-bg: rgba(var(--secondary-rgb), 0.05);
   --card-border: rgba(var(--secondary-rgb), 0.1);
 }
